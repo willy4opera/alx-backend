@@ -52,13 +52,13 @@ class Server:
         """
         page_data = self.get_page(page, page_size)
         begin, last = index_range(page, page_size)
-        total_pages = math.ceil(len(self.__dataset) / page_size)
-        page_info = {
+        total_pg = math.ceil(len(self.__dataset) / page_size)
+        pg_info = {
             'page_size': len(page_data),
             'page': page,
             'data': page_data,
             'next_page': page + 1 if last < len(self.__dataset) else None,
             'prev_page': page - 1 if begin > 0 else None,
-            'total_pages': total_pages,
+            'total_pages': total_pg,
         }
-        return page_info
+        return pg_info
