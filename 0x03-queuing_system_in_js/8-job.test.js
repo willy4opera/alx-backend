@@ -1,4 +1,7 @@
 #!/usr/bin/yarn test
+
+//  Writing the test.
+
 import sinon from 'sinon';
 import { expect } from 'chai';
 import { createQueue } from 'kue';
